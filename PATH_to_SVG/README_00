@@ -1,0 +1,35 @@
+This folder contains:
+
+README_00
+  this file
+
+path2svg.py
+  script that converts sequence of site-positions to a svg figure
+  it contains a class definition that implements useful functions 
+  for plotting svg files
+
+RW_L32_n2000_T0.5.dat
+  example random walk of 2000 steps
+  NOTE: the path of the random walker must be given as
+  a sequence of (x,y) positions on the lattice. These
+  are not the integer ids of the sites (if the walk is
+  recorded on a square lattice of side lenght L, and if
+  ID is the integer id of the sites it visits, then the
+  x,y coordinates are accessible as x=ID%L and y=ID/L).
+
+USAGE:
+in order to convert the data file to a svg-figure you might type:
+
+python path2svg.py RW_L32_n2000_T0.5.dat
+
+the svg-output is then directed to the standard outstream.
+You might pipe the output to a file and open the file 
+for postprocessing (e.g. in order to convert it to an eps-file)
+via Inkskape (http://inkscape.org/?lang=en).
+
+The illustrating figures in 
+
+  Summary of “Single Random Walker on Disordered Lattices.”
+  at <http://www.papercore.org/Argyrakis1984>
+
+where created using the script path2svg.py.
